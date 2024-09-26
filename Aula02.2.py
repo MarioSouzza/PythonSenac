@@ -1,20 +1,10 @@
-# Entrada de Dados
-# salario_base = float(input('Salário Base R$: '))
-# gratificacao = float(input('Gratificação R$: '))
+hotel = input('Digite o nome do hotel: ')
+cidade = input('Digite o nome do cidade: ')
+estrela = int(input('Informe a quantidade de estrelas de 1 a 5: '))
 
-# #Processamento
-# salarioBruto = salario_base + gratificacao
-
-# #saida
-# print(f'O valor do salário bruto é R$ {salarioBruto:.2f}')
-
-# Entrada de Dados
-salario_base = float(input('Salário Base R$: '))
-gratificacao = salario_base*0.1
-
-# Processamento
-salarioBruto = salario_base + gratificacao
-
-# saida
-print(f'O valor do salário bruto é R$ {salarioBruto:.2f}')
-print()
+# print('*****'(hotel)'*****\n','*****'(cidade)'*****\n','******'(estrela)-'*****')
+print('*'*20)
+print('*'*7+hotel+'*'*7)
+print('*'*7+cidade+'*'*7)
+print('*'*9 + str(estrela)+'*'*10)
+print('*'*20)
