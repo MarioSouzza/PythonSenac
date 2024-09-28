@@ -60,3 +60,5 @@ nome = aluno.get('Nome')
 print(nome)
 del aluno['Nota']
 print(aluno)
+
+print("Idade" in aluno)
