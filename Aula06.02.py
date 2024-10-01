@@ -41,3 +41,10 @@ for i in range(len(numeros) - 1, -1, -1):
     numeros_inversos.append(numeros[i])
 print("Lista original:", numeros)
 print("Lista invertida:", numeros_inversos)
+
+# Receba um número inteiro n do usuário e imprima todos os números primos menores que n.
+def encontrar_primos(n):
+    primos = []
+    for num in range(2,n):
+        eh_primo = True
+        for 
