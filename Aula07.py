@@ -1,5 +1,6 @@
 # #  A estrututa básica de um laço while é:
 # #  Bloco de código a ser execultado.
+import random
 contador = 1
 while contador <= 5:
     print(contador)
@@ -34,13 +35,12 @@ while contagem > 0:
 print('Feliz Ano Novo!')
 print()
 # Exemplo
-import random
-numero_secreto = random.randint(1,20)
+numero_secreto = random.randint(1, 20)
 tentativa = 0
 print("Digite um número entre 1 e 20.")
 while True:
     palpite = int(input("Dê seu palpite: "))
-    tentativa +=1
+    tentativa += 1
     if palpite < numero_secreto:
         print("Seu palpite é menor que o número secreto.")
     elif palpite > numero_secreto:
@@ -55,7 +55,8 @@ while True:
 while True:
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
-    operacao = input("Digite a operação desejada (+,-,*,/) ou 'sair' para parar: ").lower()
+    operacao = input(
+        "Digite a operação desejada (+,-,*,/) ou 'sair' para parar: ").lower()
     if operacao == 'sair':
         break
     if operacao == "+":
@@ -84,13 +85,13 @@ tentativas = 0
 max_tentativas = 3
 while True:
     senha = int(input("Digite a senha de 04 digitos: "))
-    
+
     if senha == senha_correta:
         print(f"A senha: { senha} esta correta!!!")
         break
     else:
-        print(f'A senha incorreta. Você tem {max_tentativas - tentativas} tentativas restantes.')
+        print(
+            f'A senha incorreta. Você tem {max_tentativas - tentativas} tentativas restantes.')
         tentativas += 1
         if tentativas == max_tentativas:
             print("Número máximo de tentativas atingido. Acesso negado.")
-
