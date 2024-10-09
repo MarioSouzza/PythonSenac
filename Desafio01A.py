@@ -13,9 +13,9 @@
 
 def criar_conta_bancaria():
     conta = {}
-    conta ['nome'] = input('Informe o nome do correntista: ').strip()
-    conta ['agencia'] = float(input('Informe a agencia: '))
-    conta ['conta'] = float(input('Informe a conta: '))
+    conta['nome'] = input('Informe o nome do correntista: ').strip()
+    conta['agencia'] = float(input('Informe a agencia: '))
+    conta['conta'] = float(input('Informe a conta: '))
     print("Conta bancária criada com sucesso")
 # Valida o saldo inicial
     while True:
@@ -30,11 +30,13 @@ def criar_conta_bancaria():
             print("Por favor, informe um número válido para o saldo.")
 
     print("Conta bancária criada com sucesso!")
-    
+
     return conta
+
 
 def verificar_saldo(conta):
     print(f"O saldo atual da conta é R$ {conta['saldo']:.2f}")
+
 
 def depositar(conta):
     while True:
@@ -48,6 +50,7 @@ def depositar(conta):
                 break
         except ValueError:
             print("Por favor, informe um número válido para o valor do depósito.")
+
 
 def sacar(conta):
     while True:
@@ -63,6 +66,7 @@ def sacar(conta):
                 break
         except ValueError:
             print("Por favor, informe um número válido para o valor do saque.")
+
 
 def main():
     conta = None  # Inicializa a variável da conta como None
@@ -99,6 +103,7 @@ def main():
             break
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
+
 
 if __name__ == "__main__":
     main()

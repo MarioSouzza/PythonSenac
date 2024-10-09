@@ -48,3 +48,30 @@ else:
    print(f'o resultado é {resultado}')
 finally:
    print("obrigado por usar o programa.")
+print("--------------------------------")
+
+def verifica_idade(idade):
+   if idade < 18:
+      raise ValueError ("Idade deve ser maior ou igual a 18.")
+   else:
+      print("Entrada permitida.")
+try:
+   verifica_idade(18)
+except ValueError as e:
+   print(e)
+print("--------------------------------")
+
+# Exemplo
+class SaldoInsufucienteError(Exception):
+   """Exceção levantada quando o saldo é insufuceinte para realizar uma transação."""
+   pass
+def sacar (valor, saldo):
+   if valor > saldo:
+      raise SaldoInsufucienteError("Saldo insuficiente para sacar o valor solicitado.")
+   saldo -= valor
+   return saldo
+try:
+   saldo_atual = sacar (1500, 1000)
+except SaldoInsufucienteError as e:
+    print(e)
+
